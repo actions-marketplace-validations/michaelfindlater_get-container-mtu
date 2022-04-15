@@ -1,10 +1,9 @@
 FROM golang:alpine
 
-RUN apk add curl \
-            bash \
+RUN apk add bash \
             grep  # For PCRE
 
-COPY ./check_mtu.bash /
-RUN chmod +x /check_mtu.bash
+COPY ./get_mtu.bash /get_mtu.bash
+RUN chmod +x /get_mtu.bash
 
-ENTRYPOINT [ "/check_mtu.bash" ]
+ENTRYPOINT [ "/get_mtu.bash" ]
