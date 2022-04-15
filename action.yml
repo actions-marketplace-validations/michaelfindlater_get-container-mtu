@@ -1,0 +1,8 @@
+name: 'Get Container MTU'
+description: 'Gets the MTU inside a simple container'
+outputs:
+  mtu:
+    description: 'MTU of eth0 in the container'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
