@@ -5,6 +5,6 @@ RUN apk add curl \
             grep  # For PCRE
 
 COPY ./check_mtu.bash /
-RUN chmod +x ./check_mtu.bash
+RUN chmod +x /check_mtu.bash
 
 ENTRYPOINT [ "/bin/bash/check_mtu.bash" ]

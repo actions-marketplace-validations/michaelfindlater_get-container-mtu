@@ -1,6 +1,6 @@
 # Get Container MTU
 
-This action simply prints the MTU of eth0` within a simple alpine container.
+This action simply prints the MTU of `eth0` within a simple alpine container.
 It's useful if you want to check that any defaults you're applying to containers are working.
 
 ## Outputs
@@ -24,8 +24,7 @@ jobs:
       - 
         name: Get container MTU
         id: mtu
-        uses: michaelfindlater/get-container-mtu@v1
-        
+        uses: michaelfindlater/get-container-mtu@v0.1.1-alpha
       -
         name: Print MTU
         run: echo ${{ steps.mtu.outputs.mtu }}
